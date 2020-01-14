@@ -1,16 +1,21 @@
-# fusion-18
+# 2.4 Migration Example
 
 ## User story
-As a user, I would like to prevent my output type from falling back onto default features and risking validation.
+As a user, I would like to update my repository so that it is compatible with bearer tokens
 
-## Concepts
-- fallback
+## Overview
+On this branch, we have two different content sources that are set up to use the basic auth credentials. They are both accessing data from the same endpoint, however, `content-api.js` is using the resolve pattern and `content-api-fetch` is using the fetch pattern.
 
-## New files:
--  none
+The `.env` file to use these content sources would follow this pattern:
 
-## Updated Files:
--  `components/output-types/amp.jsx`
+```
+CONTENT_BASE=https://<username>:<password>@api.sandbox.<org>.arcpublishing.com
+```
+
+## Documentation
+We will be walking through the steps outlined in the documentation here:
+- [Defining a Content Source](https://redirector.arcpublishing.com/alc/arc-products/pagebuilder/fusion/documentation/recipes/defining-arc-content-source.md?version=2.4)
+- [Migrating Content Sources from 2.3 to 2.4](https://redirector.arcpublishing.com/alc/arc-products/pagebuilder/fusion/user-documentation/pagebuilder-fusion-migrating-content-sources-from-23-to-24/)
 
 ## What's next
-Nothing! You've completed fusion training. For further exercises and information, check out the Arc Learning Center.
+Checkout the 2.4-migration-after branch!

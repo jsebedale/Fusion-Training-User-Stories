@@ -21,5 +21,8 @@
   "homepage": "https://github.com/wapopartners/Fusion-Training-User-Stories#readme",
   "devDependencies": {
     "@arc-fusion/cli": "^1.0.4"
+  },
+  "dependencies": {
+    "request-promise-native": "^1.0.8"
   }
 }
