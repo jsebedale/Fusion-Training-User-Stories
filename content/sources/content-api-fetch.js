@@ -1,5 +1,5 @@
 import request from 'request-promise-native'; 
-import { CONTENT_BASE } from 'fusion:environment';
+import { CONTENT_BASE, ARC_ACCESS_TOKEN } from 'fusion:environment';
 
 const schemaName = 'article';
 
@@ -16,6 +16,9 @@ const fetch = (key) => {
   return request({
     uri: requestUri,
     json: true,
+    auth: {
+      bearer: ARC_ACCESS_TOKEN
+    },
   }).then((content) => {
     return content;
   });
